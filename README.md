@@ -51,7 +51,7 @@ Live Demo: https://acheronx0577.github.io/JavaScript-Building-a-Platformer-Game
 
 ### 1️⃣ Clone this repo
 ```
-git clone git@github.com:acheronx0577/JavaScript-Building-a-Dice-Game.git
+git clone git@github.com:acheronx0577/JavaScript-Building-a-Platformer-Game.git
 ```
 
 ### 2️⃣ Run the file
