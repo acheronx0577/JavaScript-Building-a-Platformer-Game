@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forest Explorer - Terminal Platformer</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="terminal">
+      <header class="terminal-header">
+        <div class="window-controls">
+          <span class="control close"></span>
+          <span class="control minimize"></span>
+          <span class="control maximize"></span>
+        </div>
+        <div class="title-bar">
+          <span class="prompt">></span>
+          <span class="title">FOREST_EXPLORER</span>
+          <span class="cursor">_</span>
+        </div>
+      </header>
+
+      <main class="terminal-body">
+        <!-- Start Screen -->
+        <div class="start-screen">
+          <h1 class="main-title">Forest Explorer</h1>
+          <p class="instructions">
+            Guide the explorer through the ancient forest to reach the golden artifacts.
+          </p>
+          <p class="instructions">
+            Navigate platforms and avoid falling into the abyss below.
+          </p>
+          
+          <div class="control-panel" style="margin-top: 20px; grid-template-columns: 1fr;">
+            <button class="terminal-btn" id="start-btn">
+              BEGIN_JOURNEY
+            </button>
+          </div>
+        </div>
+
+        <!-- Game Container -->
+        <div class="game-container" style="display: none;">
+          <div class="game-header">
+            <span class="game-title">FOREST_OF_ANCIENTS</span>
+            <div class="game-stats">
+              <span>CHECKPOINTS: <span id="checkpoint-count">0/3</span></span>
+              <span>STATUS: <span id="game-status">EXPLORING</span></span>
+            </div>
+          </div>
+          <canvas id="canvas"></canvas>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions-panel">
+          <div class="instructions-header">
+            <span class="instructions-title">CONTROLS</span>
+          </div>
+          <div class="instructions-content">
+            <div class="instruction-item">
+              <span class="key">← →</span>
+              <span class="action">Move Explorer</span>
+            </div>
+            <div class="instruction-item">
+              <span class="key">SPACE</span>
+              <span class="action">Jump</span>
+            </div>
+            <div class="instruction-item">
+              <span class="key">R</span>
+              <span class="action">Restart Game</span>
+            </div>
+            <div class="instruction-item">
+              <span class="key">ESC</span>
+              <span class="action">Pause/Menu</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Checkpoint Screen -->
+        <div class="checkpoint-screen" style="display: none;">
+          <h2>Ancient Artifact Found!</h2>
+          <p>You discovered one of the forest's hidden treasures.</p>
+          <p>Continue your journey to find the remaining artifacts.</p>
+        </div>
+      </main>
+
+      <footer class="terminal-footer">
+        <div class="footer-stats">
+          <span class="stat">THEME: FOREST_EXPLORER</span>
+          <span class="stat">MODE: <span id="footer-mode">ADVENTURE</span></span>
+          <span class="stat">VERSION: 2.1.0</span>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
